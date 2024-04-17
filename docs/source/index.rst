@@ -12,3 +12,4 @@
    :caption: Contents:
 
    leetcode-note/index
+   ungrouped-note/index
