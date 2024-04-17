@@ -2,8 +2,6 @@
 
 # markdwon公式输入测试
 
-还是md用起来舒服点，暂定以后都用markdown
-
 ## 普通
 $$\int_1^\infty \frac{1}{x^2} dx = 1$$
 
