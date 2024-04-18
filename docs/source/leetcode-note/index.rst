@@ -8,3 +8,4 @@ Leetcode笔记
     :maxdepth: 1
 
     day1
+    day2

@@ -97,7 +97,7 @@
 - note: 输入数组是以 **引用** 方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。
 - 暴力解法 - O(n^2)：
   ```C++
-      int removeElement(vector<int>& nums, int val) {
+    int removeElement(vector<int>& nums, int val) {
         int size = nums.size();
         for (int i = 0; i < size; i++) {
             if (nums[i] == val) {
