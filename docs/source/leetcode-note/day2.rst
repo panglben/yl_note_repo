@@ -81,7 +81,7 @@ LC59-spiral matrix 2 - M
 
     .. image:: img/image.png
         :width: 50%
-        :align: left
+        :align: center
     
         每层分四块, 依次填入
 
@@ -90,7 +90,7 @@ LC59-spiral matrix 2 - M
 
 -  note2: n为奇数时, 矩阵中间的值要单独处理
 
--  code
+-  code-滑动窗口
 
    .. code:: c++
 
@@ -117,8 +117,8 @@ LC59-spiral matrix 2 - M
             return res;
         }
 
--  时间复杂度：O(n^2)
+-  时间复杂度: O(n^2)
 
--  空间复杂度：O(1)
+-  空间复杂度: O(1)
 
 .. |alt text| image:: img/image.png
