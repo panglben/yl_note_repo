@@ -82,8 +82,6 @@ LC59-spiral matrix 2 - M
     .. image:: img/image.png
         :width: 50%
         :align: center
-    
-        每层分四块, 依次填入
 
 
 -  note1: 只需要n/2个layer就可以填满
