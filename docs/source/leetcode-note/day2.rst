@@ -79,7 +79,7 @@ LC59-spiral matrix 2 - M
 
 -  思路如图
 
-    .. image:: img/image.png
+    .. image:: img/spiral-m.png
         :width: 50%
         :align: center
 
@@ -115,8 +115,7 @@ LC59-spiral matrix 2 - M
             return res;
         }
 
--  时间复杂度: O(n^2)
+-  时间复杂度: \ :math:`O(n^2)`\
 
--  空间复杂度: O(1)
+-  空间复杂度: \ :math:`O(1)`\
 
-.. |alt text| image:: img/image.png
