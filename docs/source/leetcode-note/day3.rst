@@ -29,12 +29,19 @@ Day3: 链表-1
 
     - 循环链表
 
-LC203-移除链表元素
-------------------
+- 链表与数组
+
+    数组适用于频繁查询 (O(1)), 较少增删 (O(n))的场景； 而链表相反, 适用于频繁增删 (O(1)), 较少查询 (O(n))的场景
+
+
+LC203-移除链表元素-S
+-------------------
 
 - 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
 
-- note: C++里最好手动清理一下被删的node
+- note1: C++里最好手动清理一下被删的node
+
+- note2: 加入虚拟头节点后可以避免对头节点的特殊处理
 
 - code
 
@@ -145,7 +152,26 @@ LC707-设计链表-M
             int _size;
         };
 
-LC206-反转链表
---------------
+LC206-反转链表-S
+----------------
 
-Todo
+- 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表
+
+- code-双指针
+
+    .. code:: c++
+
+        ListNode* reverseList(ListNode* head) {
+        ListNode* temp = nullptr;
+        ListNode* curr = head;
+        ListNode* pre = nullptr;
+        while (curr != nullptr) {
+            temp = curr->next;
+            curr->next = pre;
+            pre = curr;
+            curr = temp;
+        }
+        return pre;
+        }   
+
+- 时间复杂度: O(n)
