@@ -96,6 +96,7 @@ LC151-反转字符串里的单词
 - code: AC初版-准备额外空间给新数组
 
     .. code:: C++
+    
         string reverseWords(string s) {
             string res;
             string word;
