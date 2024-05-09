@@ -1,9 +1,10 @@
 #include<iostream>
 #include<vector>
 #include<stack>
+#include<queue>
 #include <algorithm>
 using std::vector;
-using std::stack;
+using std::stack, std::queue;
 using std::cout, std::cin, std::endl;
 
 struct TreeNode
@@ -165,6 +166,31 @@ public:
         reverse(res.begin(), res.end());
         return res;
     }
+
+    vector<vector<int>> levelOrderTrave(TreeNode* root) {
+        vector<vector<int>> res;
+        queue<TreeNode*> que;
+
+        if (root == nullptr) {
+            return res;
+        }
+
+        que.push(root);
+        while (!que.empty()) {
+            vector<int> vec;
+            int size = que.size();
+            while (size--) {
+                TreeNode* cur = que.front();
+                vec.push_back(cur->val);
+                que.pop();
+                if (cur->left) que.push(cur->left);
+                if (cur->right) que.push(cur->right);
+            }
+            res.push_back(vec);
+        }
+
+        return res;
+    }
 };
 
 int main()
@@ -182,7 +208,6 @@ int main()
     RecurTrave rec;
     vector<int> vec;
     vec = rec.preorderTrave(root);
-
     for (auto n : vec) {
         cout << n << " ";
     }
@@ -191,9 +216,20 @@ int main()
     IterTrave it;
     vector<int> vec2;
     vec2 = it.inorderTrave2(root);
-
     for (auto n : vec2) {
         cout << n << " ";
     }
     cout << endl;
+
+    vector<vector<int>> levelVec;
+    levelVec = it.levelOrderTrave(root);
+    cout << levelVec.size() << endl;
+
+    for (auto v : levelVec) {
+        cout << '[';
+        for (auto n : v) {
+            cout << n << " ";
+        }
+        cout << ']' << endl;
+    }
 }
